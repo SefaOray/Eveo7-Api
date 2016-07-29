@@ -85,3 +85,4 @@ C:\Users\Sefa\Documents\Visual Studio 2015\Projects\Eveo7\Eveo7\bin\System.Web.H
 C:\Users\Sefa\Documents\Visual Studio 2015\Projects\Eveo7\Eveo7\obj\Debug\Eveo7.csprojResolveAssemblyReference.cache
 C:\Users\Sefa\Documents\Visual Studio 2015\Projects\Eveo7\Eveo7\obj\Debug\Eveo7.dll
 C:\Users\Sefa\Documents\Visual Studio 2015\Projects\Eveo7\Eveo7\obj\Debug\Eveo7.pdb
+C:\Users\Sefa\Documents\Visual Studio 2015\Projects\Eveo7\Eveo7\bin\connectionStrings.config
