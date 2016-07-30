@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Eveo7.Models
+namespace Eveo7.Api.Models
 {
     // Models returned by AccountController actions.
 

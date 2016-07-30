@@ -1,17 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using Microsoft.AspNet.Identity;
-using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.Owin;
 using Microsoft.Owin.Security.Cookies;
-using Microsoft.Owin.Security.Google;
 using Microsoft.Owin.Security.OAuth;
 using Owin;
-using Eveo7.Providers;
-using Eveo7.Models;
+using Eveo7.Api.Providers;
+using Eveo7.Api.Models;
 
-namespace Eveo7
+namespace Eveo7.Api
 {
     public partial class Startup
     {

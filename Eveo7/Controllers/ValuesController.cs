@@ -5,7 +5,7 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 
-namespace Eveo7.Controllers
+namespace Eveo7.Api.Controllers
 {
     [Authorize]
     public class ValuesController : ApiController

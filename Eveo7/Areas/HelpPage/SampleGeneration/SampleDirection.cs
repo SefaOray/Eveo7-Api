@@ -1,4 +1,4 @@
-namespace Eveo7.Areas.HelpPage
+namespace Eveo7.Api.Areas.HelpPage
 {
     /// <summary>
     /// Indicates whether the sample is used for request or response

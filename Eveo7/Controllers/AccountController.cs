@@ -13,11 +13,11 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.OAuth;
-using Eveo7.Models;
-using Eveo7.Providers;
-using Eveo7.Results;
+using Eveo7.Api.Models;
+using Eveo7.Api.Providers;
+using Eveo7.Api.Results;
 
-namespace Eveo7.Controllers
+namespace Eveo7.Api.Controllers
 {
     [Authorize]
     [RoutePrefix("api/Account")]

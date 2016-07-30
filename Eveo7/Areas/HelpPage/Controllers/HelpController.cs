@@ -1,10 +1,10 @@
 using System;
 using System.Web.Http;
 using System.Web.Mvc;
-using Eveo7.Areas.HelpPage.ModelDescriptions;
-using Eveo7.Areas.HelpPage.Models;
+using Eveo7.Api.Areas.HelpPage.ModelDescriptions;
+using Eveo7.Api.Areas.HelpPage.Models;
 
-namespace Eveo7.Areas.HelpPage.Controllers
+namespace Eveo7.Api.Areas.HelpPage.Controllers
 {
     /// <summary>
     /// The controller that will handle requests for the help page.

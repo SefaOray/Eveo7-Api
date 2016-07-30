@@ -7,7 +7,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Web.Http;
 
-namespace Eveo7.Results
+namespace Eveo7.Api.Results
 {
     public class ChallengeResult : IHttpActionResult
     {

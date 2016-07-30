@@ -3,7 +3,7 @@ using System.Text;
 using System.Web;
 using System.Web.Http.Description;
 
-namespace Eveo7.Areas.HelpPage
+namespace Eveo7.Api.Areas.HelpPage
 {
     public static class ApiDescriptionExtensions
     {

@@ -1,6 +1,6 @@
 using System;
 
-namespace Eveo7.Areas.HelpPage.ModelDescriptions
+namespace Eveo7.Api.Areas.HelpPage.ModelDescriptions
 {
     public class ParameterAnnotation
     {

@@ -3,7 +3,7 @@ using System.Globalization;
 using System.Linq;
 using System.Reflection;
 
-namespace Eveo7.Areas.HelpPage.ModelDescriptions
+namespace Eveo7.Api.Areas.HelpPage.ModelDescriptions
 {
     internal static class ModelNameHelper
     {

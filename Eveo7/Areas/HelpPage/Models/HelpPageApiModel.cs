@@ -2,9 +2,9 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Net.Http.Headers;
 using System.Web.Http.Description;
-using Eveo7.Areas.HelpPage.ModelDescriptions;
+using Eveo7.Api.Areas.HelpPage.ModelDescriptions;
 
-namespace Eveo7.Areas.HelpPage.Models
+namespace Eveo7.Api.Areas.HelpPage.Models
 {
     /// <summary>
     /// The model that represents an API displayed on the help page.

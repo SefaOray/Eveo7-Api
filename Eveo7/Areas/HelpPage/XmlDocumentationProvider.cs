@@ -5,9 +5,9 @@ using System.Reflection;
 using System.Web.Http.Controllers;
 using System.Web.Http.Description;
 using System.Xml.XPath;
-using Eveo7.Areas.HelpPage.ModelDescriptions;
+using Eveo7.Api.Areas.HelpPage.ModelDescriptions;
 
-namespace Eveo7.Areas.HelpPage
+namespace Eveo7.Api.Areas.HelpPage
 {
     /// <summary>
     /// A custom <see cref="IDocumentationProvider"/> that reads the API documentation from an XML documentation file.

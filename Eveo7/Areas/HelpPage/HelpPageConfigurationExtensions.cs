@@ -11,10 +11,10 @@ using System.Net.Http.Headers;
 using System.Web.Http;
 using System.Web.Http.Controllers;
 using System.Web.Http.Description;
-using Eveo7.Areas.HelpPage.ModelDescriptions;
-using Eveo7.Areas.HelpPage.Models;
+using Eveo7.Api.Areas.HelpPage.ModelDescriptions;
+using Eveo7.Api.Areas.HelpPage.Models;
 
-namespace Eveo7.Areas.HelpPage
+namespace Eveo7.Api.Areas.HelpPage
 {
     public static class HelpPageConfigurationExtensions
     {

@@ -1,7 +1,7 @@
 using System.Web.Http;
 using System.Web.Mvc;
 
-namespace Eveo7.Areas.HelpPage
+namespace Eveo7.Api.Areas.HelpPage
 {
     public class HelpPageAreaRegistration : AreaRegistration
     {

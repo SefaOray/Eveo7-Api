@@ -1,7 +1,7 @@
 using System;
 using System.Reflection;
 
-namespace Eveo7.Areas.HelpPage.ModelDescriptions
+namespace Eveo7.Api.Areas.HelpPage.ModelDescriptions
 {
     public interface IModelDocumentationProvider
     {

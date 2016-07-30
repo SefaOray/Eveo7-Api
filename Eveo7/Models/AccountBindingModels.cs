@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using Newtonsoft.Json;
 
-namespace Eveo7.Models
+namespace Eveo7.Api.Models
 {
     // Models used as parameters to AccountController actions.
 

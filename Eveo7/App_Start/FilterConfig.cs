@@ -1,7 +1,6 @@
-﻿using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 
-namespace Eveo7
+namespace Eveo7.Api
 {
     public class FilterConfig
     {

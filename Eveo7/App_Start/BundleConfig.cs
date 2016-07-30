@@ -1,7 +1,6 @@
-﻿using System.Web;
-using System.Web.Optimization;
+﻿using System.Web.Optimization;
 
-namespace Eveo7
+namespace Eveo7.Api
 {
     public class BundleConfig
     {
