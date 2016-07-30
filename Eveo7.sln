@@ -5,6 +5,10 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eveo7.Api", "Eveo7\Eveo7.Api.csproj", "{2C18AC70-8763-43A6-A378-34E4E0F2E3C6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eveo7.Services", "Eveo7.Services\Eveo7.Services.csproj", "{6866D044-FF32-41FA-BE0A-1DBCFAF6826C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eveo7.Models", "Eveo7.Models\Eveo7.Models.csproj", "{755D4CA7-9330-40BB-B26C-0349B5DE2044}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{2C18AC70-8763-43A6-A378-34E4E0F2E3C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2C18AC70-8763-43A6-A378-34E4E0F2E3C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2C18AC70-8763-43A6-A378-34E4E0F2E3C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6866D044-FF32-41FA-BE0A-1DBCFAF6826C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6866D044-FF32-41FA-BE0A-1DBCFAF6826C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6866D044-FF32-41FA-BE0A-1DBCFAF6826C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6866D044-FF32-41FA-BE0A-1DBCFAF6826C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{755D4CA7-9330-40BB-B26C-0349B5DE2044}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{755D4CA7-9330-40BB-B26C-0349B5DE2044}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{755D4CA7-9330-40BB-B26C-0349B5DE2044}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{755D4CA7-9330-40BB-B26C-0349B5DE2044}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

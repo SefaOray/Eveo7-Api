@@ -76,3 +76,17 @@ C:\Users\Sefa\Documents\Visual Studio 2015\Projects\Eveo7\Eveo7\bin\Microsoft.Ow
 C:\Users\Sefa\Documents\Visual Studio 2015\Projects\Eveo7\Eveo7\bin\System.Web.Http.Owin.xml
 C:\Users\Sefa\Documents\Visual Studio 2015\Projects\Eveo7\Eveo7\obj\Debug\Eveo7.Api.dll
 C:\Users\Sefa\Documents\Visual Studio 2015\Projects\Eveo7\Eveo7\obj\Debug\Eveo7.Api.pdb
+C:\Users\Sefa\Documents\Visual Studio 2015\Projects\Eveo7\Eveo7\bin\EveLib.Core.dll
+C:\Users\Sefa\Documents\Visual Studio 2015\Projects\Eveo7\Eveo7\bin\EveLib.EveXml.dll
+C:\Users\Sefa\Documents\Visual Studio 2015\Projects\Eveo7\Eveo7\bin\Eveo7.Models.dll
+C:\Users\Sefa\Documents\Visual Studio 2015\Projects\Eveo7\Eveo7\bin\Eveo7.Services.dll
+C:\Users\Sefa\Documents\Visual Studio 2015\Projects\Eveo7\Eveo7\bin\Nito.AsyncEx.Concurrent.dll
+C:\Users\Sefa\Documents\Visual Studio 2015\Projects\Eveo7\Eveo7\bin\Nito.AsyncEx.dll
+C:\Users\Sefa\Documents\Visual Studio 2015\Projects\Eveo7\Eveo7\bin\Nito.AsyncEx.Enlightenment.dll
+C:\Users\Sefa\Documents\Visual Studio 2015\Projects\Eveo7\Eveo7\bin\Eveo7.Models.pdb
+C:\Users\Sefa\Documents\Visual Studio 2015\Projects\Eveo7\Eveo7\bin\Eveo7.Services.pdb
+C:\Users\Sefa\Documents\Visual Studio 2015\Projects\Eveo7\Eveo7\bin\EveLib.Core.xml
+C:\Users\Sefa\Documents\Visual Studio 2015\Projects\Eveo7\Eveo7\bin\EveLib.EveXml.xml
+C:\Users\Sefa\Documents\Visual Studio 2015\Projects\Eveo7\Eveo7\bin\Nito.AsyncEx.xml
+C:\Users\Sefa\Documents\Visual Studio 2015\Projects\Eveo7\Eveo7\bin\Nito.AsyncEx.Concurrent.xml
+C:\Users\Sefa\Documents\Visual Studio 2015\Projects\Eveo7\Eveo7\bin\Nito.AsyncEx.Enlightenment.xml

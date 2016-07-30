@@ -8,7 +8,7 @@ using System.Web.Optimization;
 using System.Web.Routing;
 using Eveo7.Api;
 
-namespace Eveo7
+namespace Eveo7.Api
 {
     public class WebApiApplication : System.Web.HttpApplication
     {
