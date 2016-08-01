@@ -1,0 +1,5 @@
+C:\Users\Sefa\Documents\Visual Studio 2015\Projects\Eveo7\Eveo7.Utilities\bin\Debug\Eveo7.Utilities.dll
+C:\Users\Sefa\Documents\Visual Studio 2015\Projects\Eveo7\Eveo7.Utilities\bin\Debug\Eveo7.Utilities.pdb
+C:\Users\Sefa\Documents\Visual Studio 2015\Projects\Eveo7\Eveo7.Utilities\obj\Debug\Eveo7.Utilities.csprojResolveAssemblyReference.cache
+C:\Users\Sefa\Documents\Visual Studio 2015\Projects\Eveo7\Eveo7.Utilities\obj\Debug\Eveo7.Utilities.dll
+C:\Users\Sefa\Documents\Visual Studio 2015\Projects\Eveo7\Eveo7.Utilities\obj\Debug\Eveo7.Utilities.pdb

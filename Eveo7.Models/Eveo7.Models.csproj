@@ -64,7 +64,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EveApiException.cs" />
+    <Compile Include="Account\AccountApiKey.cs" />
+    <Compile Include="DataInterfaces\IAccountListingData.cs" />
+    <Compile Include="DataInterfaces\IApiKeyData.cs" />
+    <Compile Include="O7Exception.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ServiceInterfaces\IAccountListingService.cs" />
     <Compile Include="ServiceInterfaces\IApiKeyService.cs" />

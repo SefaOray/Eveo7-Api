@@ -18,3 +18,7 @@ C:\Users\Sefa\Documents\Visual Studio 2015\Projects\Eveo7\Eveo7.Services\bin\Deb
 C:\Users\Sefa\Documents\Visual Studio 2015\Projects\Eveo7\Eveo7.Services\obj\Debug\Eveo7.Services.csprojResolveAssemblyReference.cache
 C:\Users\Sefa\Documents\Visual Studio 2015\Projects\Eveo7\Eveo7.Services\obj\Debug\Eveo7.Services.dll
 C:\Users\Sefa\Documents\Visual Studio 2015\Projects\Eveo7\Eveo7.Services\obj\Debug\Eveo7.Services.pdb
+C:\Users\Sefa\Documents\Visual Studio 2015\Projects\Eveo7\Eveo7.Services\bin\Debug\Eveo7.Data.dll
+C:\Users\Sefa\Documents\Visual Studio 2015\Projects\Eveo7\Eveo7.Services\bin\Debug\Dapper.dll
+C:\Users\Sefa\Documents\Visual Studio 2015\Projects\Eveo7\Eveo7.Services\bin\Debug\Eveo7.Data.pdb
+C:\Users\Sefa\Documents\Visual Studio 2015\Projects\Eveo7\Eveo7.Services\bin\Debug\Dapper.xml

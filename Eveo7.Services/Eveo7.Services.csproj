@@ -73,6 +73,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Eveo7.Data\Eveo7.Data.csproj">
+      <Project>{9612dc3b-e283-4c0b-8d66-c3b5c7b8828f}</Project>
+      <Name>Eveo7.Data</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Eveo7.Models\Eveo7.Models.csproj">
       <Project>{755d4ca7-9330-40bb-b26c-0349b5de2044}</Project>
       <Name>Eveo7.Models</Name>

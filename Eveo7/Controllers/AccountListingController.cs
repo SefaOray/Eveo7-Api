@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Web.Http;
 using eZet.EveLib.EveXmlModule;
 using Eveo7.Models.ServiceInterfaces;
+using Microsoft.AspNet.Identity;
 
 namespace Eveo7.Api.Controllers
 {
@@ -21,6 +22,22 @@ namespace Eveo7.Api.Controllers
         {
             var key = new ApiKey(keyId, vCode);
             return _listingService.GetCharacterInfos(key);
+        }
+
+        [HttpPost]
+        public IHttpActionResult AddCharacterToAccount(ApiKey key, long characterId)
+        {
+            _listingService.AddCharacterToAccount(key,User.Identity.GetUserId(),characterId);
+
+            return Ok();
+        }
+
+        [HttpPost]
+        public IHttpActionResult AddApiKeyToAccount(ApiKey key)
+        {
+            _listingService.AddApiKeyToAccount(key,User.Identity.GetUserId());
+
+            return Ok();
         }
     }
 }
