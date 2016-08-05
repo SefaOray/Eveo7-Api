@@ -24,3 +24,7 @@ C:\Users\Sefa\Documents\Visual Studio 2015\Projects\Eveo7\Eveo7.NancyApi\bin\Nit
 C:\Users\Sefa\Documents\Visual Studio 2015\Projects\Eveo7\Eveo7.NancyApi\obj\Debug\Eveo7.Api.csprojResolveAssemblyReference.cache
 C:\Users\Sefa\Documents\Visual Studio 2015\Projects\Eveo7\Eveo7.NancyApi\obj\Debug\Eveo7.Api.dll
 C:\Users\Sefa\Documents\Visual Studio 2015\Projects\Eveo7\Eveo7.NancyApi\obj\Debug\Eveo7.Api.pdb
+C:\Users\Sefa\Documents\Visual Studio 2015\Projects\Eveo7\Eveo7.NancyApi\bin\Eveo7.Data.dll
+C:\Users\Sefa\Documents\Visual Studio 2015\Projects\Eveo7\Eveo7.NancyApi\bin\Dapper.dll
+C:\Users\Sefa\Documents\Visual Studio 2015\Projects\Eveo7\Eveo7.NancyApi\bin\Eveo7.Data.pdb
+C:\Users\Sefa\Documents\Visual Studio 2015\Projects\Eveo7\Eveo7.NancyApi\bin\Dapper.xml

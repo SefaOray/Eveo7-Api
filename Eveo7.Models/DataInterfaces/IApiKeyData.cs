@@ -14,5 +14,6 @@ namespace Eveo7.Models.DataInterfaces
         AccountApiKey GetAccountApiKey(int keyId);
         AccountApiKey GetAccountApiKey(int keyId, string vCode);
         AccountApiKey CreateAccountApiKey(int keyId, string vCode, string userId);
+        IEnumerable<AccountApiKey> LisAccountApiKeys(string accountId);
     }
 }

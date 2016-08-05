@@ -1,4 +1,5 @@
-﻿using eZet.EveLib.EveXmlModule;
+﻿using System.Collections.Generic;
+using eZet.EveLib.EveXmlModule;
 using Eveo7.Models;
 using Eveo7.Models.Account;
 using Eveo7.Models.DataInterfaces;
@@ -14,17 +15,15 @@ namespace Eveo7.Services
             _keyData = apiKeyData;
         }
 
-        public bool IsValidCharacterKey(long keyId, string vCode, bool throwIfInvalid = false)
+        public bool IsValidCharacterKey(long keyId, string vCode)
         {
-            return IsValidCharacterKey(new ApiKey(keyId,vCode),throwIfInvalid);
+            return IsValidCharacterKey(new ApiKey(keyId,vCode));
         }
 
-        public bool IsValidCharacterKey(ApiKey key, bool throwIfInvalid = false)
+        public bool IsValidCharacterKey(ApiKey key)
         {
             var valid = key.IsValidKey() && key.KeyType != ApiKeyType.Account;
 
-            if (!valid && throwIfInvalid)
-                throw new O7Exception("Not valid account/character key.");
 
             return valid;
         }
@@ -54,6 +53,11 @@ namespace Eveo7.Services
         public AccountApiKey CreateAccountApiKey(int keyId, string vCode, string accountId)
         {
             return _keyData.CreateAccountApiKey(keyId, vCode, accountId);
+        }
+
+        public IEnumerable<AccountApiKey> ListAccountApiKeys(string accountId)
+        {
+            return _keyData.LisAccountApiKeys(accountId);
         }
     }
 }

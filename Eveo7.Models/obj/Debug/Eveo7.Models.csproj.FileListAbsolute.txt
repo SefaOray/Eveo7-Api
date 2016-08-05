@@ -15,4 +15,3 @@ C:\Users\Sefa\Documents\Visual Studio 2015\Projects\Eveo7\Eveo7.Models\bin\Debug
 C:\Users\Sefa\Documents\Visual Studio 2015\Projects\Eveo7\Eveo7.Models\bin\Debug\Nito.AsyncEx.Enlightenment.xml
 C:\Users\Sefa\Documents\Visual Studio 2015\Projects\Eveo7\Eveo7.Models\obj\Debug\Eveo7.Models.dll
 C:\Users\Sefa\Documents\Visual Studio 2015\Projects\Eveo7\Eveo7.Models\obj\Debug\Eveo7.Models.pdb
-C:\Users\Sefa\Documents\Visual Studio 2015\Projects\Eveo7\Eveo7.Models\obj\Debug\Eveo7.Models.csprojResolveAssemblyReference.cache

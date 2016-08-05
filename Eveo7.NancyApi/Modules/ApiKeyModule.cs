@@ -1,7 +1,7 @@
 ﻿using Eveo7.Models.ServiceInterfaces;
-using Eveo7.Services;
 using Nancy;
 using Nancy.Responses;
+using Nancy.Security;
 
 namespace Eveo7.Api.Modules
 {
@@ -9,8 +9,10 @@ namespace Eveo7.Api.Modules
     {
         public ApiKeyModule(IApiKeyService apiKeyService) : base("/apiKey")
         {
+            this.RequiresAuthentication();
+
             //Add Eve Online api key to Eveo7 account.
-            Get["/addKey/{keyId:int}/{vCode}"] = parameters =>
+            Post["/addKey/{keyId:int}/{vCode}"] = parameters =>
             {
                 if (!apiKeyService.IsValidCharacterKey(parameters.KeyId, parameters.vCode))
                     return new TextResponse(HttpStatusCode.BadRequest, "Invalid Api Key.");
@@ -21,6 +23,9 @@ namespace Eveo7.Api.Modules
 
                 return apiKeyService.CreateAccountApiKey(parameters.KeyId, parameters.vCode, "123");
             };
+
+            //Returns AccountApiKey list for current user
+            Get["/listKeys"] = parameters => apiKeyService.ListAccountApiKeys(Context.CurrentUser.UserName);
         }
     }
 }

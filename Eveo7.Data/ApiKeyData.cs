@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using eZet.EveLib.EveXmlModule;
 using Eveo7.Models.Account;
 using Eveo7.Models.DataInterfaces;
@@ -12,7 +13,7 @@ namespace Eveo7.Data
             var sql =
                 $"SELECT * FROM Account_ApiKeys WITH (NOLOCK) WHERE KeyId = {key.KeyId} AND VerificationCode = '{key.VCode}'";
 
-            var dbResult = DataExecuter.Querysingle<AccountApiKey>(sql);
+            var dbResult = DataExecuter.QuerySingle<AccountApiKey>(sql);
 
             return dbResult;
         }
@@ -21,7 +22,7 @@ namespace Eveo7.Data
         {
             var sql = $"SELECT * FROM Account_ApiKeys WITH (NOLOCK) WHERE Id = {keyId}";
 
-            var dbResult = DataExecuter.Querysingle<AccountApiKey>(sql);
+            var dbResult = DataExecuter.QuerySingle<AccountApiKey>(sql);
 
             return dbResult;
         }
@@ -30,7 +31,7 @@ namespace Eveo7.Data
         {
             var sql = $"SELECT * FROM Account_ApiKeys WITH (NOLOCK) WHERE KeyId = {keyId} AND VerificationCode = '{vCode}'";
 
-            var dbResult = DataExecuter.Querysingle<AccountApiKey>(sql);
+            var dbResult = DataExecuter.QuerySingle<AccountApiKey>(sql);
 
             return dbResult;
         }
@@ -40,7 +41,16 @@ namespace Eveo7.Data
             var sql = $@"INSERT INTO Account_ApiKeys(KeyId, VerificationCode, UserId) VALUES ({keyId}, '{vCode}', '{userId}')
                         SELECT * FROM Account_ApiKeys WHERE Id = SCOPE_IDENTITY()";
 
-            var dbResult = DataExecuter.Querysingle<AccountApiKey>(sql);
+            var dbResult = DataExecuter.QuerySingle<AccountApiKey>(sql);
+
+            return dbResult;
+        }
+
+        public IEnumerable<AccountApiKey> LisAccountApiKeys(string accountId)
+        {
+            var sql = $@"SELECT * FROM Account_ApiKeys WITH (NOLOCK) WHERE UserId = '{accountId}'";
+
+            var dbResult = DataExecuter.QueryMany<AccountApiKey>(sql);
 
             return dbResult;
         }

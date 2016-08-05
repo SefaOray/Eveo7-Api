@@ -11,7 +11,7 @@ namespace Eveo7.Data
 {
     internal static class DataExecuter
     {
-        internal static T Querysingle<T>(string sql) where T : new()
+        internal static T QuerySingle<T>(string sql) where T : new()
         {
             using (var con = new SqlConnection(ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString))
             {
@@ -26,6 +26,17 @@ namespace Eveo7.Data
             using (var con = new SqlConnection(ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString))
             {
                 con.Execute(sql);
+            }
+        }
+
+        internal static IEnumerable<T> QueryMany<T>(string sql) where T : new()
+        {
+            using (var con = new SqlConnection(ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString))
+            {
+                var result = con.Query<T>(sql);
+
+                var queryMany = result as T[] ?? result.ToArray();
+                return queryMany.Any() ? default(IEnumerable<T>) : queryMany;
             }
         }
     }
