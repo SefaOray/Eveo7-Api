@@ -3,3 +3,9 @@ C:\Users\Sefa\Documents\Visual Studio 2015\Projects\Eveo7\Eveo7.Utilities\bin\De
 C:\Users\Sefa\Documents\Visual Studio 2015\Projects\Eveo7\Eveo7.Utilities\obj\Debug\Eveo7.Utilities.csprojResolveAssemblyReference.cache
 C:\Users\Sefa\Documents\Visual Studio 2015\Projects\Eveo7\Eveo7.Utilities\obj\Debug\Eveo7.Utilities.dll
 C:\Users\Sefa\Documents\Visual Studio 2015\Projects\Eveo7\Eveo7.Utilities\obj\Debug\Eveo7.Utilities.pdb
+C:\Users\Sefa\Documents\Visual Studio 2015\Projects\Eveo7\Eveo7.Utilities\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Sefa\Documents\Visual Studio 2015\Projects\Eveo7\Eveo7.Utilities\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\Sefa\Documents\Visual Studio 2015\Projects\Eveo7\Eveo7.Utilities\bin\Debug\System.Web.Http.dll
+C:\Users\Sefa\Documents\Visual Studio 2015\Projects\Eveo7\Eveo7.Utilities\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Sefa\Documents\Visual Studio 2015\Projects\Eveo7\Eveo7.Utilities\bin\Debug\System.Net.Http.Formatting.xml
+C:\Users\Sefa\Documents\Visual Studio 2015\Projects\Eveo7\Eveo7.Utilities\bin\Debug\System.Web.Http.xml

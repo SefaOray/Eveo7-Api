@@ -12,6 +12,6 @@ namespace Eveo7.Models.ServiceInterfaces
     {
         IEnumerable<CharacterList.CharacterInfo> GetCharacterInfos(ApiKey key);
         void AddCharacterToAccount(ApiKey key, string accountId, long characterId);
-        void AddApiKeyToAccount(ApiKey key, string accountId);
+
     }
 }

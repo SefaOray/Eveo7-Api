@@ -44,6 +44,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Autofac, Version=3.5.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.3.5.2\lib\net40\Autofac.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Autofac.Integration.WebApi, Version=3.4.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.WebApi2.3.4.0\lib\net45\Autofac.Integration.WebApi.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="EveLib.Core, Version=3.0.7.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\eZet.EveLib.Core.3.0.7\lib\net45\EveLib.Core.dll</HintPath>
       <Private>True</Private>
@@ -290,6 +298,10 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Eveo7.Data\Eveo7.Data.csproj">
+      <Project>{9612dc3b-e283-4c0b-8d66-c3b5c7b8828f}</Project>
+      <Name>Eveo7.Data</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Eveo7.Models\Eveo7.Models.csproj">
       <Project>{755d4ca7-9330-40bb-b26c-0349b5de2044}</Project>
       <Name>Eveo7.Models</Name>

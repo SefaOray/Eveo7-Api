@@ -12,6 +12,7 @@ namespace Eveo7.Services
         private readonly IApiKeyService _apiKeyService;
         private readonly IApiKeyData _apiKeyData;
         private readonly IAccountListingData _accountListingData;
+
         public AccountListingService(IApiKeyService apiKeyService, IApiKeyData apiKeyData, IAccountListingData accountListingData)
         {
             _apiKeyService = apiKeyService;
@@ -36,18 +37,6 @@ namespace Eveo7.Services
                 throw new O7Exception("You are not authorized to add a character from this Api key.");
 
             _accountListingData.AddCharacterToAccount(characterId,accountId,accountApiKey);
-        }
-
-        public void AddApiKeyToAccount(ApiKey key, string accountId)
-        {
-            _apiKeyService.IsValidCharacterKey(key, true);
-
-            var accountApiKey = _apiKeyData.GetAccountApiKey(key, accountId);
-
-            if (accountApiKey != null && accountApiKey.AccountId != accountId)
-                throw new O7Exception("You are not authorized to add a character from this Api key.");
-
-            _accountListingData.AddApiKeyToAccount(key.KeyId,key.VCode,accountId);
         }
     }
 }

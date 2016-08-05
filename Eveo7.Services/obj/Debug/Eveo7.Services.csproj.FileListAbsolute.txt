@@ -22,3 +22,9 @@ C:\Users\Sefa\Documents\Visual Studio 2015\Projects\Eveo7\Eveo7.Services\bin\Deb
 C:\Users\Sefa\Documents\Visual Studio 2015\Projects\Eveo7\Eveo7.Services\bin\Debug\Dapper.dll
 C:\Users\Sefa\Documents\Visual Studio 2015\Projects\Eveo7\Eveo7.Services\bin\Debug\Eveo7.Data.pdb
 C:\Users\Sefa\Documents\Visual Studio 2015\Projects\Eveo7\Eveo7.Services\bin\Debug\Dapper.xml
+C:\Users\Sefa\Documents\Visual Studio 2015\Projects\Eveo7\Eveo7.Services\bin\Debug\Eveo7.Utilities.dll
+C:\Users\Sefa\Documents\Visual Studio 2015\Projects\Eveo7\Eveo7.Services\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\Sefa\Documents\Visual Studio 2015\Projects\Eveo7\Eveo7.Services\bin\Debug\System.Web.Http.dll
+C:\Users\Sefa\Documents\Visual Studio 2015\Projects\Eveo7\Eveo7.Services\bin\Debug\Eveo7.Utilities.pdb
+C:\Users\Sefa\Documents\Visual Studio 2015\Projects\Eveo7\Eveo7.Services\bin\Debug\System.Net.Http.Formatting.xml
+C:\Users\Sefa\Documents\Visual Studio 2015\Projects\Eveo7\Eveo7.Services\bin\Debug\System.Web.Http.xml

@@ -10,6 +10,5 @@ namespace Eveo7.Models.DataInterfaces
     public interface IAccountListingData
     {
         void AddCharacterToAccount(long characterId, string accountId, AccountApiKey key);
-        void AddApiKeyToAccount(long keyId, string vCode, string accountId);
     }
 }

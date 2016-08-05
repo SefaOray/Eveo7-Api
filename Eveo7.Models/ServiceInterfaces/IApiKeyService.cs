@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using eZet.EveLib.EveXmlModule;
+﻿using eZet.EveLib.EveXmlModule;
+using Eveo7.Models.Account;
 
 namespace Eveo7.Models.ServiceInterfaces
 {
@@ -11,5 +7,8 @@ namespace Eveo7.Models.ServiceInterfaces
     {
         bool IsValidCharacterKey(long keyId, string vCode, bool throwIfInvalid = false);
         bool IsValidCharacterKey(ApiKey key, bool throwIfInvalid = false);
+        bool KeyBelongsToAccount(int keyId, string userId);
+        bool CanCreateAccountApiKey(int keyId, string vcode);
+        AccountApiKey CreateAccountApiKey(int keyId, string vCode, string accountId);
     }
 }

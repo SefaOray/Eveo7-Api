@@ -90,3 +90,13 @@ C:\Users\Sefa\Documents\Visual Studio 2015\Projects\Eveo7\Eveo7\bin\System.Web.H
 C:\Users\Sefa\Documents\Visual Studio 2015\Projects\Eveo7\Eveo7\obj\Debug\Eveo7.Api.csprojResolveAssemblyReference.cache
 C:\Users\Sefa\Documents\Visual Studio 2015\Projects\Eveo7\Eveo7\obj\Debug\Eveo7.Api.dll
 C:\Users\Sefa\Documents\Visual Studio 2015\Projects\Eveo7\Eveo7\obj\Debug\Eveo7.Api.pdb
+C:\Users\Sefa\Documents\Visual Studio 2015\Projects\Eveo7\Eveo7\bin\Autofac.dll
+C:\Users\Sefa\Documents\Visual Studio 2015\Projects\Eveo7\Eveo7\bin\Autofac.Integration.WebApi.dll
+C:\Users\Sefa\Documents\Visual Studio 2015\Projects\Eveo7\Eveo7\bin\Eveo7.Data.dll
+C:\Users\Sefa\Documents\Visual Studio 2015\Projects\Eveo7\Eveo7\bin\Dapper.dll
+C:\Users\Sefa\Documents\Visual Studio 2015\Projects\Eveo7\Eveo7\bin\Eveo7.Data.pdb
+C:\Users\Sefa\Documents\Visual Studio 2015\Projects\Eveo7\Eveo7\bin\Autofac.xml
+C:\Users\Sefa\Documents\Visual Studio 2015\Projects\Eveo7\Eveo7\bin\Autofac.Integration.WebApi.xml
+C:\Users\Sefa\Documents\Visual Studio 2015\Projects\Eveo7\Eveo7\bin\Dapper.xml
+C:\Users\Sefa\Documents\Visual Studio 2015\Projects\Eveo7\Eveo7\bin\Eveo7.Utilities.dll
+C:\Users\Sefa\Documents\Visual Studio 2015\Projects\Eveo7\Eveo7\bin\Eveo7.Utilities.pdb

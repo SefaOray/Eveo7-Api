@@ -17,13 +17,5 @@ namespace Eveo7.Data
 
             DataExecuter.Execute(sql);
         }
-
-        public void AddApiKeyToAccount(long keyId, string vCode, string accountId)
-        {
-            var sql =
-                $"INSERT INTO Account_ApiKeys (AccountId, KeyId, VerificationCode) VALUES('{accountId}', {keyId}, '{vCode}'";
-
-            DataExecuter.Execute(sql);
-        }
     }
 }

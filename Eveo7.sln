@@ -3,15 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eveo7.Api", "Eveo7\Eveo7.Api.csproj", "{2C18AC70-8763-43A6-A378-34E4E0F2E3C6}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eveo7.Services", "Eveo7.Services\Eveo7.Services.csproj", "{6866D044-FF32-41FA-BE0A-1DBCFAF6826C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eveo7.Models", "Eveo7.Models\Eveo7.Models.csproj", "{755D4CA7-9330-40BB-B26C-0349B5DE2044}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eveo7.Data", "Eveo7.Data\Eveo7.Data.csproj", "{9612DC3B-E283-4C0B-8D66-C3B5C7B8828F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eveo7.Utilities", "Eveo7.Utilities\Eveo7.Utilities.csproj", "{20AC9567-B7BA-4CFF-999F-68852236051E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eveo7.Api", "Eveo7.NancyApi\Eveo7.Api.csproj", "{ED638DD5-E755-4B7A-940D-5C94AB425686}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,10 +17,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{2C18AC70-8763-43A6-A378-34E4E0F2E3C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2C18AC70-8763-43A6-A378-34E4E0F2E3C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2C18AC70-8763-43A6-A378-34E4E0F2E3C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2C18AC70-8763-43A6-A378-34E4E0F2E3C6}.Release|Any CPU.Build.0 = Release|Any CPU
 		{6866D044-FF32-41FA-BE0A-1DBCFAF6826C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{6866D044-FF32-41FA-BE0A-1DBCFAF6826C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6866D044-FF32-41FA-BE0A-1DBCFAF6826C}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -35,10 +29,10 @@ Global
 		{9612DC3B-E283-4C0B-8D66-C3B5C7B8828F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9612DC3B-E283-4C0B-8D66-C3B5C7B8828F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9612DC3B-E283-4C0B-8D66-C3B5C7B8828F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{20AC9567-B7BA-4CFF-999F-68852236051E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{20AC9567-B7BA-4CFF-999F-68852236051E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{20AC9567-B7BA-4CFF-999F-68852236051E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{20AC9567-B7BA-4CFF-999F-68852236051E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED638DD5-E755-4B7A-940D-5C94AB425686}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED638DD5-E755-4B7A-940D-5C94AB425686}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED638DD5-E755-4B7A-940D-5C94AB425686}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED638DD5-E755-4B7A-940D-5C94AB425686}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
