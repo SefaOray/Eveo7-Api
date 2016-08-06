@@ -13,5 +13,12 @@ namespace Eveo7.Models.Account
         public string AccountId { get; set; }
         public int KeyId { get; set; }
         public string VCode { get; set; }
+
+        public List<AccountCharacter> Characters { get; set; }
+
+        public AccountApiKey()
+        {
+            Characters = new List<AccountCharacter>();
+        }
     }
 }

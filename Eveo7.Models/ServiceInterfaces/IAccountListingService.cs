@@ -5,13 +5,13 @@ using System.Text;
 using System.Threading.Tasks;
 using eZet.EveLib.EveXmlModule;
 using eZet.EveLib.EveXmlModule.Models.Account;
+using Eveo7.Models.Account;
 
 namespace Eveo7.Models.ServiceInterfaces
 {
     public interface IAccountListingService
     {
-        IEnumerable<CharacterList.CharacterInfo> GetCharacterInfos(ApiKey key);
-        void AddCharacterToAccount(ApiKey key, string accountId, long characterId);
+        AccountCharacter AddCharacterToAccount(int accountKeyId, int accountId, long characterId);
 
     }
 }

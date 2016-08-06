@@ -38,6 +38,10 @@
       <HintPath>..\packages\eZet.EveLib.EveXml.3.0.8\lib\net45\EveLib.EveXml.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Nancy, Version=1.4.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Nancy.1.4.3\lib\net40\Nancy.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.6.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
@@ -65,11 +69,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Account\AccountApiKey.cs" />
+    <Compile Include="Account\AccountCharacter.cs" />
+    <Compile Include="Account\User.cs" />
     <Compile Include="DataInterfaces\IAccountListingData.cs" />
     <Compile Include="DataInterfaces\IApiKeyData.cs" />
+    <Compile Include="DataInterfaces\IAuthData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ServiceInterfaces\IAccountListingService.cs" />
     <Compile Include="ServiceInterfaces\IApiKeyService.cs" />
+    <Compile Include="ServiceInterfaces\ISecurityService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

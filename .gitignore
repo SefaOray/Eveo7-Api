@@ -1,2 +1,9 @@
-Eveo7/connectionStrings.config
 Eveo7/bin/
+Eveo7.NancyApi/bin/
+Eveo7.Data/bin/
+Eveo7.Models/bin/
+Eveo7.Services/bin/
+/Eveo7.NancyApi/bin/
+/Eveo7.Data/bin/
+/Eveo7.Models/bin/
+/Eveo7.Services/bin/

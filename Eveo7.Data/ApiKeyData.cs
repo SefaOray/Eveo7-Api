@@ -50,7 +50,13 @@ namespace Eveo7.Data
         {
             var sql = $@"SELECT * FROM Account_ApiKeys WITH (NOLOCK) WHERE UserId = '{accountId}'";
 
-            var dbResult = DataExecuter.QueryMany<AccountApiKey>(sql);
+            var func = new Func<AccountApiKey, AccountCharacter, AccountApiKey>((key, character) =>
+            {
+                key.Characters.Add(character);
+                return key;
+            });
+
+            var dbResult = DataExecuter.QueryMany(sql,func);
 
             return dbResult;
         }

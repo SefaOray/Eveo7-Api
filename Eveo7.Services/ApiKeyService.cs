@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using eZet.EveLib.EveXmlModule;
-using Eveo7.Models;
 using Eveo7.Models.Account;
 using Eveo7.Models.DataInterfaces;
 using Eveo7.Models.ServiceInterfaces;

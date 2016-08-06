@@ -39,5 +39,16 @@ namespace Eveo7.Data
                 return queryMany.Any() ? default(IEnumerable<T>) : queryMany;
             }
         }
+
+        internal static IEnumerable<T> QueryMany<T,T2>(string sql, Func<T,T2, T> mapperFunc) where T : new()
+        {
+            using (var con = new SqlConnection(ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString))
+            {
+                var result = con.Query<T, T2, T>(sql, mapperFunc);
+
+                var queryMany = result as T[] ?? result.ToArray();
+                return queryMany.Any() ? default(IEnumerable<T>) : queryMany;
+            }
+        }
     }
 }

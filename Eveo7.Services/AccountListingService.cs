@@ -2,6 +2,7 @@
 using eZet.EveLib.EveXmlModule;
 using eZet.EveLib.EveXmlModule.Models.Account;
 using Eveo7.Models;
+using Eveo7.Models.Account;
 using Eveo7.Models.DataInterfaces;
 using Eveo7.Models.ServiceInterfaces;
 
@@ -20,23 +21,9 @@ namespace Eveo7.Services
             _accountListingData = accountListingData;
         }
 
-        public IEnumerable<CharacterList.CharacterInfo>  GetCharacterInfos(ApiKey key)
+        public AccountCharacter AddCharacterToAccount(int accountKeyId, int accountId, long characterId)
         {
-            _apiKeyService.IsValidCharacterKey(key, true);
-
-            return key.GetCharacterList().Result.Characters;
-        }
-
-        public void AddCharacterToAccount(ApiKey key, string accountId, long characterId)
-        {
-            _apiKeyService.IsValidCharacterKey(key, true);
-
-            var accountApiKey = _apiKeyData.GetAccountApiKey(key, accountId);
-
-            if(accountApiKey == null || accountApiKey.AccountId != accountId)
-                throw new O7Exception("You are not authorized to add a character from this Api key.");
-
-            _accountListingData.AddCharacterToAccount(characterId,accountId,accountApiKey);
+            return _accountListingData.AddCharacterToAccount(characterId,accountId, accountKeyId);
         }
     }
 }
