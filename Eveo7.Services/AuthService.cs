@@ -5,7 +5,7 @@ using Eveo7.Models.ServiceInterfaces;
 
 namespace Eveo7.Services
 {
-    public class AuthService
+    public class AuthService : IAuthService
     {
         private readonly ISecurityService _securityService;
         private readonly IAuthData _authData;
@@ -21,6 +21,11 @@ namespace Eveo7.Services
             var hashedPass = _securityService.Encrypt(password, salt);
             var token = new Guid().ToString();
             return _authData.RegisterUser(email, hashedPass, salt, token);
+        }
+
+        public User GetUserFromToken(string token)
+        {
+            return  _authData.GetUserFromToken(token);
         }
     }
 }

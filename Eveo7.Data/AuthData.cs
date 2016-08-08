@@ -13,5 +13,12 @@ namespace Eveo7.Data
 
             return DataExecuter.QuerySingle<User>(sql);
         }
+
+        public User GetUserFromToken(string token)
+        {
+            var sql = $@"SELECT Id, Email from Account_Users WITH (NOLOCK) WHERE Token = '{token}'";
+
+            return DataExecuter.QuerySingle<User>(sql);
+        }
     }
 }

@@ -9,12 +9,16 @@ namespace Eveo7.Services
 {
     public class SecurityService : ISecurityService
     {
-        private const int DerivationIterations = 1000;
-        private const int Keysize = 256;
+        private readonly int _derivationIterations;
+        private readonly int _keysize;
+        private readonly IConfigService _configService;
 
-        public SecurityService()
+        public SecurityService(IConfigService configService)
         {
-            
+            _configService = configService;
+            _derivationIterations = _configService.GetValue<int>("DerivationIterations");
+            _keysize = _configService.GetValue<int>("KeySize");
+
         }
 
         public string Encrypt(string plainText, string passPhrase)
@@ -24,9 +28,9 @@ namespace Eveo7.Services
             var saltStringBytes = Generate256BitsOfRandomEntropy();
             var ivStringBytes = Generate256BitsOfRandomEntropy();
             var plainTextBytes = Encoding.UTF8.GetBytes(plainText);
-            using (var password = new Rfc2898DeriveBytes(passPhrase, saltStringBytes, DerivationIterations))
+            using (var password = new Rfc2898DeriveBytes(passPhrase, saltStringBytes, _derivationIterations))
             {
-                var keyBytes = password.GetBytes(Keysize / 8);
+                var keyBytes = password.GetBytes(_keysize / 8);
                 using (var symmetricKey = new RijndaelManaged())
                 {
                     symmetricKey.BlockSize = 256;
@@ -60,15 +64,15 @@ namespace Eveo7.Services
             // [32 bytes of Salt] + [32 bytes of IV] + [n bytes of CipherText]
             var cipherTextBytesWithSaltAndIv = Convert.FromBase64String(cipherText);
             // Get the saltbytes by extracting the first 32 bytes from the supplied cipherText bytes.
-            var saltStringBytes = cipherTextBytesWithSaltAndIv.Take(Keysize / 8).ToArray();
+            var saltStringBytes = cipherTextBytesWithSaltAndIv.Take(_keysize / 8).ToArray();
             // Get the IV bytes by extracting the next 32 bytes from the supplied cipherText bytes.
-            var ivStringBytes = cipherTextBytesWithSaltAndIv.Skip(Keysize / 8).Take(Keysize / 8).ToArray();
+            var ivStringBytes = cipherTextBytesWithSaltAndIv.Skip(_keysize / 8).Take(_keysize / 8).ToArray();
             // Get the actual cipher text bytes by removing the first 64 bytes from the cipherText string.
-            var cipherTextBytes = cipherTextBytesWithSaltAndIv.Skip((Keysize / 8) * 2).Take(cipherTextBytesWithSaltAndIv.Length - ((Keysize / 8) * 2)).ToArray();
+            var cipherTextBytes = cipherTextBytesWithSaltAndIv.Skip((_keysize / 8) * 2).Take(cipherTextBytesWithSaltAndIv.Length - ((_keysize / 8) * 2)).ToArray();
 
-            using (var password = new Rfc2898DeriveBytes(passPhrase, saltStringBytes, DerivationIterations))
+            using (var password = new Rfc2898DeriveBytes(passPhrase, saltStringBytes, _derivationIterations))
             {
-                var keyBytes = password.GetBytes(Keysize / 8);
+                var keyBytes = password.GetBytes(_keysize / 8);
                 using (var symmetricKey = new RijndaelManaged())
                 {
                     symmetricKey.BlockSize = 256;

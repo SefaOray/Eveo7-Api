@@ -80,6 +80,7 @@
     <Compile Include="AccountListingService.cs" />
     <Compile Include="ApiKeyService.cs" />
     <Compile Include="AuthService.cs" />
+    <Compile Include="ConfigService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SecurityService.cs" />
   </ItemGroup>

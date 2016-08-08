@@ -1,3 +1,4 @@
+using System;
 using Eveo7.Models.ServiceInterfaces;
 using Nancy;
 using Nancy.Security;
@@ -11,7 +12,7 @@ namespace Eveo7.Api.Modules
 {
     public class AcountListingModule : NancyModule
     {
-        public AcountListingModule(IApiKeyService apiKeyService, IAccountListingService accountListingService)
+        public AcountListingModule(IApiKeyService apiKeyService, IAccountListingService accountListingService) : base("/accountListing")
         {
             this.RequiresAuthentication();
 
@@ -35,10 +36,9 @@ namespace Eveo7.Api.Modules
                 return accountListingService.AddCharacterToAccount(key.Id, parameters.accountId, parameters.characterId);
             };
 
-            Get["/listCharacters/{accountId:int}"] = parameters =>
+            Get["/listCharacters"] = parameters =>
             {
-
-                return null;
+                throw new NotImplementedException();
             };
         }
     }
