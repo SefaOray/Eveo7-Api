@@ -6,5 +6,6 @@ namespace Eveo7.Models.DataInterfaces
     {
         User RegisterUser(string email, string password, string salt, string token);
         User GetUserFromToken(string token);
+        User GetUserFromUsername(string email);
     }
 }

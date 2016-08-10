@@ -8,7 +8,7 @@ namespace Eveo7.Data
         public User RegisterUser(string email, string password, string salt, string token)
         {
             var sql =
-                $@"INSERT INTO Account_Users(Email, Password, Token, Salt) VALUES('{email}', '{password}', '{token}', '{salt}' 
+                $@"INSERT INTO Account_Users(Email, Password, Token, Salt) VALUES('{email}', '{password}', '{token}', '{salt}') 
                 SELECT Id, Email, Token FROM Account_Users WHERE Id = SCOPE_IDENTITY()";
 
             return DataExecuter.QuerySingle<User>(sql);
@@ -17,6 +17,13 @@ namespace Eveo7.Data
         public User GetUserFromToken(string token)
         {
             var sql = $@"SELECT Id, Email from Account_Users WITH (NOLOCK) WHERE Token = '{token}'";
+
+            return DataExecuter.QuerySingle<User>(sql);
+        }
+
+        public User GetUserFromUsername(string email)
+        {
+            var sql = $@"SELECT Email, Password, Token, Salt FROM Account_Users WHERE Email = '{email}'";
 
             return DataExecuter.QuerySingle<User>(sql);
         }

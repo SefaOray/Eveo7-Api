@@ -1,4 +1,5 @@
-﻿using Eveo7.Models.ServiceInterfaces;
+﻿using System.Linq;
+using Eveo7.Models.ServiceInterfaces;
 using Nancy;
 using Nancy.Authentication.Stateless;
 using Nancy.Bootstrapper;
@@ -16,9 +17,9 @@ namespace Eveo7.Api
         {
             var config = new StatelessAuthenticationConfiguration(nancyContext =>
             {
-                var token = nancyContext.Request.Query.token;
+                var token = nancyContext.Request.Headers.Authorization;
 
-                if (token == null)
+                if (string.IsNullOrWhiteSpace(token))
                     return null;
 
                 var validator = container.Resolve<IAuthService>();

@@ -101,7 +101,7 @@
     <Compile Include="Bootstrapper.cs" />
     <Compile Include="Modules\AcountListingModule.cs" />
     <Compile Include="Modules\ApiKeyModule.cs" />
-    <Compile Include="Modules\Auth.cs" />
+    <Compile Include="Modules\AuthModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -112,6 +112,7 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="Settings.config" />
+    <Content Include="connectionStrings.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

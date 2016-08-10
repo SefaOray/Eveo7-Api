@@ -27,5 +27,20 @@ namespace Eveo7.Services
         {
             return  _authData.GetUserFromToken(token);
         }
+
+        public User ValidateUser(string email, string password)
+        {
+            var user = _authData.GetUserFromUsername(email);
+
+            if (user == null)
+                return null;
+
+            var hashedPass = _securityService.Decrypt(password, user.Salt);
+
+            if (hashedPass == user.Password)
+                return user;
+
+            return null;
+        }
     }
 }

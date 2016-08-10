@@ -17,7 +17,7 @@ namespace Eveo7.Data
             {
                 var result = con.Query<T>(sql);
 
-                return result.Any() ? default(T) : result.First();
+                return result.Any() ? result.First() : default(T);
             }
         }
 

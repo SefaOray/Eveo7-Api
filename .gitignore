@@ -7,3 +7,7 @@ Eveo7.Services/bin/
 /Eveo7.Data/bin/
 /Eveo7.Models/bin/
 /Eveo7.Services/bin/
+/Eveo7.Models/obj/Debug
+/Eveo7.Services/obj/Debug
+/Eveo7.Data/obj/Debug
+/Eveo7.NancyApi/connectionStrings.config

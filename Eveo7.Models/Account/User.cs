@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Nancy.Security;
 
 namespace Eveo7.Models.Account
@@ -6,18 +7,29 @@ namespace Eveo7.Models.Account
     public class User : IUserIdentity
     {
         public int Id { get; set; }
-        public string UserName { get; }
+        public string UserName { get; set; }
         public IEnumerable<string> Claims { get; }
 
-        public string Email { get; set; }
         public string Password { get; set; }
-
+        public string Salt { get; set; }
+        public Guid TokenGuid { get; set; }
         public User(IEnumerable<string> claims, string userName)
         {
             Claims = claims;
             UserName = userName;
         }
 
+        public string Email
+        {
+            get { return UserName; }
+            set { UserName = value; }
+        }
+
+        public string Token
+        {
+            get { return TokenGuid.ToString("N"); }
+            set { TokenGuid = new Guid(value); }
+        }
         public User()
         {
             

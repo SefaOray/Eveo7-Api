@@ -107,9 +107,36 @@ namespace Eveo7.Services
             return randomBytes;
         }
 
+        static readonly char[] AvailableCharacters = {
+            'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M',
+            'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z',
+            'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
+            'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
+            '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '-', '_'
+          };
+
+        private static string GenerateIdentifier(int length)
+        {
+            var identifier = new char[length];
+            var randomData = new byte[length];
+
+            using (var rng = new RNGCryptoServiceProvider())
+            {
+                rng.GetBytes(randomData);
+            }
+
+            for (var idx = 0; idx < identifier.Length; idx++)
+            {
+                var pos = randomData[idx] % AvailableCharacters.Length;
+                identifier[idx] = AvailableCharacters[pos];
+            }
+
+            return new string(identifier);
+        }
+
         public string GenerateSalt()
         {
-            return Encoding.UTF8.GetString(Generate256BitsOfRandomEntropy());
+            return GenerateIdentifier(50);
         }
     }
 }
