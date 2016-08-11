@@ -103,6 +103,7 @@
     <Compile Include="Modules\ApiKeyModule.cs" />
     <Compile Include="Modules\AuthModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ResponseHelper.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\index.sshtml">

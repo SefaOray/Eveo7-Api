@@ -21,17 +21,16 @@ namespace Eveo7.Services
 
         public bool IsValidCharacterKey(ApiKey key)
         {
-            var valid = key.IsValidKey() && key.KeyType != ApiKeyType.Account;
-
+            var valid = key.IsValidKey() && key.KeyType != ApiKeyType.Corporation;
 
             return valid;
         }
 
-        public bool KeyBelongsToAccount(int keyId, string userId)
+        public bool KeyBelongsToAccount(int keyId, int userId)
         {
             var apiKey = _keyData.GetAccountApiKey(keyId);
 
-            if (apiKey != null || apiKey.AccountId != userId)
+            if (apiKey != null || apiKey.UserId != userId)
                 return false;
 
             return true;
@@ -49,12 +48,12 @@ namespace Eveo7.Services
             return key == null;
         }
 
-        public AccountApiKey CreateAccountApiKey(int keyId, string vCode, string accountId)
+        public AccountApiKey CreateAccountApiKey(int keyId, string vCode, int userId)
         {
-            return _keyData.CreateAccountApiKey(keyId, vCode, accountId);
+            return _keyData.CreateAccountApiKey(keyId, vCode, userId);
         }
 
-        public IEnumerable<AccountApiKey> ListAccountApiKeys(string accountId)
+        public IEnumerable<AccountApiKey> ListAccountApiKeys(int accountId)
         {
             return _keyData.LisAccountApiKeys(accountId);
         }

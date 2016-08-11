@@ -9,15 +9,8 @@ namespace Eveo7.Models.Account
         public int Id { get; set; }
         public string UserName { get; set; }
         public IEnumerable<string> Claims { get; }
-
         public string Password { get; set; }
         public string Salt { get; set; }
-        public Guid TokenGuid { get; set; }
-        public User(IEnumerable<string> claims, string userName)
-        {
-            Claims = claims;
-            UserName = userName;
-        }
 
         public string Email
         {
@@ -25,14 +18,16 @@ namespace Eveo7.Models.Account
             set { UserName = value; }
         }
 
-        public string Token
-        {
-            get { return TokenGuid.ToString("N"); }
-            set { TokenGuid = new Guid(value); }
-        }
+        public string Token { get; set; }
         public User()
         {
             
+        }
+
+        public User(IEnumerable<string> claims, string userName)
+        {
+            Claims = claims;
+            UserName = userName;
         }
     }
 }

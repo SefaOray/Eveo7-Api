@@ -16,22 +16,26 @@ namespace Eveo7.Api.Modules
         {
             this.RequiresAuthentication();
 
+            
             //Add Character from Eve Online api to user account
-            Post["/addCharacter/{accountId}/{keyId:int}/{characterId:int}"] = parameters =>
+            Post["/addCharacter/{keyId:int}/{characterId:int}"] = parameters =>
             {
-                var userApiKeys = (IEnumerable<AccountApiKey>)apiKeyService.ListAccountApiKeys(parameters.accountId);
+                var currentUser = (User)Context.CurrentUser;
+
+                var userApiKeys = (IEnumerable<AccountApiKey>)apiKeyService.ListAccountApiKeys(currentUser.Id);
 
                 var key = userApiKeys.FirstOrDefault(k => k.Id == parameters.keyId);
 
                 if (key == null)
-                    return new TextResponse(HttpStatusCode.BadRequest, "You can not add a character from this Api Key");
+                    return ResponseHelper.ReturnBadRequestResponse("You can not add characters from this api key");
 
-                var eveApiKey = new ApiKey(key.KeyId, key.VCode);
+                var eveApiKey = new ApiKey(key.KeyId, key.VerificationCode);
                 var characters = eveApiKey.GetCharacterList().Result.Characters;
                 var character = characters.FirstOrDefault(c => c.CharacterId == parameters.characterId);
 
-                if(character == null)
-                    return  new TextResponse(HttpStatusCode.BadRequest, "Character is not exist in given api key information.");
+                if (character == null)
+                    return
+                        ResponseHelper.ReturnBadRequestResponse("Character is not exist in given api key information.");
 
                 return accountListingService.AddCharacterToAccount(key.Id, parameters.accountId, parameters.characterId);
             };

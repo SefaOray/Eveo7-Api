@@ -10,9 +10,9 @@ namespace Eveo7.Models.Account
     public class AccountApiKey
     {
         public int Id { get; set; }
-        public string AccountId { get; set; }
+        public int UserId { get; set; }
         public int KeyId { get; set; }
-        public string VCode { get; set; }
+        public string VerificationCode { get; set; }
 
         public List<AccountCharacter> Characters { get; set; }
 

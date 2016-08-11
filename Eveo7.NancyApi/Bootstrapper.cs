@@ -1,5 +1,4 @@
-﻿using System.Linq;
-using Eveo7.Models.ServiceInterfaces;
+﻿using Eveo7.Models.ServiceInterfaces;
 using Nancy;
 using Nancy.Authentication.Stateless;
 using Nancy.Bootstrapper;

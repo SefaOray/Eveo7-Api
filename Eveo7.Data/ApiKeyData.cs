@@ -8,7 +8,7 @@ namespace Eveo7.Data
 {
     public class ApiKeyData : IApiKeyData
     {
-        public AccountApiKey GetAccountApiKey(ApiKey key, string accountId)
+        public AccountApiKey GetAccountApiKey(ApiKey key, int userId)
         {
             var sql =
                 $"SELECT * FROM Account_ApiKeys WITH (NOLOCK) WHERE KeyId = {key.KeyId} AND VerificationCode = '{key.VCode}'";
@@ -36,7 +36,7 @@ namespace Eveo7.Data
             return dbResult;
         }
 
-        public AccountApiKey CreateAccountApiKey(int keyId, string vCode, string userId)
+        public AccountApiKey CreateAccountApiKey(int keyId, string vCode, int userId)
         {
             var sql = $@"INSERT INTO Account_ApiKeys(KeyId, VerificationCode, UserId) VALUES ({keyId}, '{vCode}', '{userId}')
                         SELECT * FROM Account_ApiKeys WHERE Id = SCOPE_IDENTITY()";
@@ -46,17 +46,11 @@ namespace Eveo7.Data
             return dbResult;
         }
 
-        public IEnumerable<AccountApiKey> LisAccountApiKeys(string accountId)
+        public IEnumerable<AccountApiKey> LisAccountApiKeys(int userId)
         {
-            var sql = $@"SELECT * FROM Account_ApiKeys WITH (NOLOCK) WHERE UserId = '{accountId}'";
+            var sql = $@"SELECT * FROM Account_ApiKeys WITH (NOLOCK) WHERE UserId = '{userId}'";
 
-            var func = new Func<AccountApiKey, AccountCharacter, AccountApiKey>((key, character) =>
-            {
-                key.Characters.Add(character);
-                return key;
-            });
-
-            var dbResult = DataExecuter.QueryMany(sql,func);
+            var dbResult = DataExecuter.QueryMany<AccountApiKey>(sql);
 
             return dbResult;
         }

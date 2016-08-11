@@ -10,10 +10,10 @@ namespace Eveo7.Models.DataInterfaces
 {
     public interface IApiKeyData
     {
-        AccountApiKey GetAccountApiKey(ApiKey key, string accountId);
+        AccountApiKey GetAccountApiKey(ApiKey key, int userId);
         AccountApiKey GetAccountApiKey(int keyId);
         AccountApiKey GetAccountApiKey(int keyId, string vCode);
-        AccountApiKey CreateAccountApiKey(int keyId, string vCode, string userId);
-        IEnumerable<AccountApiKey> LisAccountApiKeys(string accountId);
+        AccountApiKey CreateAccountApiKey(int keyId, string vCode, int userId);
+        IEnumerable<AccountApiKey> LisAccountApiKeys(int userId);
     }
 }

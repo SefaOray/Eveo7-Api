@@ -19,7 +19,7 @@ namespace Eveo7.Services
         {
             var salt = _securityService.GenerateSalt();
             var hashedPass = _securityService.Encrypt(password, salt);
-            var token = new Guid().ToString();
+            var token = Guid.NewGuid().ToString();
             return _authData.RegisterUser(email, hashedPass, salt, token);
         }
 
