@@ -48,14 +48,19 @@ namespace Eveo7.Services
             return key == null;
         }
 
-        public AccountApiKey CreateAccountApiKey(int keyId, string vCode, int userId)
+        public AccountApiKey CreateAccountApiKey(int keyId, string vCode, int userId, string name)
         {
-            return _keyData.CreateAccountApiKey(keyId, vCode, userId);
+            return _keyData.CreateAccountApiKey(keyId, vCode, userId,name);
         }
 
         public IEnumerable<AccountApiKey> ListAccountApiKeys(int accountId)
         {
             return _keyData.LisAccountApiKeys(accountId);
+        }
+
+        public AccountApiKey GetKey(int id)
+        {
+            return _keyData.GetAccountApiKey(id);
         }
     }
 }

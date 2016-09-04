@@ -11,13 +11,12 @@ namespace Eveo7.Services
     {
         private readonly int _derivationIterations;
         private readonly int _keysize;
-        private readonly IConfigService _configService;
 
         public SecurityService(IConfigService configService)
         {
-            _configService = configService;
-            _derivationIterations = _configService.GetValue<int>("DerivationIterations");
-            _keysize = _configService.GetValue<int>("KeySize");
+            var configService1 = configService;
+            _derivationIterations = configService1.GetValue<int>("DerivationIterations");
+            _keysize = configService1.GetValue<int>("KeySize");
 
         }
 

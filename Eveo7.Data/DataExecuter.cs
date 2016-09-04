@@ -36,7 +36,7 @@ namespace Eveo7.Data
                 var result = con.Query<T>(sql);
 
                 var queryMany = result as T[] ?? result.ToArray();
-                return queryMany.Any() ? default(IEnumerable<T>) : queryMany;
+                return queryMany.Any() ? queryMany : default(IEnumerable<T>);
             }
         }
 

@@ -70,6 +70,7 @@
   <ItemGroup>
     <Compile Include="Account\AccountApiKey.cs" />
     <Compile Include="Account\AccountCharacter.cs" />
+    <Compile Include="Account\EveCharacter.cs" />
     <Compile Include="Account\User.cs" />
     <Compile Include="DataInterfaces\IAccountListingData.cs" />
     <Compile Include="DataInterfaces\IApiKeyData.cs" />

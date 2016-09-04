@@ -14,12 +14,17 @@ namespace Eveo7.Services
             _securityService = securityService;
             _authData = authData;
         }
-
+        private readonly object _thisLock = new object();
         public User Register(string email, string password)
         {
             var salt = _securityService.GenerateSalt();
             var hashedPass = _securityService.Encrypt(password, salt);
-            var token = Guid.NewGuid().ToString();
+            var token = "";
+            lock (_thisLock)
+            {
+                 token = Guid.NewGuid().ToString();
+            }
+            
             return _authData.RegisterUser(email, hashedPass, salt, token);
         }
 
@@ -35,12 +40,19 @@ namespace Eveo7.Services
             if (user == null)
                 return null;
 
-            var hashedPass = _securityService.Decrypt(password, user.Salt);
+            var decryptedPass = _securityService.Decrypt(user.Password, user.Salt);
 
-            if (hashedPass == user.Password)
+            if (decryptedPass == password)
                 return user;
 
             return null;
+        }
+
+        public bool UserExistsWithEmail(string email)
+        {
+            var user = _authData.GetUserFromUsername(email);
+
+            return user != null;
         }
     }
 }

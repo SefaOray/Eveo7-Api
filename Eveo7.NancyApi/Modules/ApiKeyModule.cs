@@ -14,7 +14,7 @@ namespace Eveo7.Api.Modules
 
             
             //Add Eve Online api key to Eveo7 account.
-            Post["/addKey/{keyId:int}/{vCode}"] = parameters =>
+            Post["/addKey/{keyId:int}/{vCode}/{name}"] = parameters =>
             {
                 var currentUser = (User)Context.CurrentUser;
 
@@ -25,7 +25,7 @@ namespace Eveo7.Api.Modules
                     return new TextResponse(HttpStatusCode.BadRequest, "You can't use this api key");
 
 
-                return apiKeyService.CreateAccountApiKey(parameters.KeyId, parameters.vCode, currentUser.Id);
+                return apiKeyService.CreateAccountApiKey(parameters.KeyId, parameters.vCode, currentUser.Id, parameters.name);
             };
 
             //Returns AccountApiKey list for current user

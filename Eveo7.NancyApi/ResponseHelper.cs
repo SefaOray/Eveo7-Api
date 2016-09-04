@@ -16,6 +16,7 @@ namespace Eveo7.Api
             return response;
         }
 
+
         public class BasicResponse
         {
             public string Message { get; set; }

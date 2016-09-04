@@ -12,5 +12,7 @@ namespace Eveo7.Models.Account
         public int CharacterId { get; set; }
         public int AccountId { get; set; }
         public int AccountKeyId { get; set; }
+        public string CharacterName { get; set; }
+        public bool IsAdded { get; set; }
     }
 }

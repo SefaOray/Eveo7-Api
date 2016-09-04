@@ -1,4 +1,3 @@
-using System;
 using Eveo7.Models.ServiceInterfaces;
 using Nancy;
 using Nancy.Security;
@@ -6,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using eZet.EveLib.EveXmlModule;
 using Eveo7.Models.Account;
-using Nancy.Responses;
+using Nancy.Routing;
 
 namespace Eveo7.Api.Modules
 {
@@ -42,7 +41,12 @@ namespace Eveo7.Api.Modules
 
             Get["/listCharacters"] = parameters =>
             {
-                throw new NotImplementedException();
+                return new List<AccountCharacter>();
+            };
+
+            Get["/listCharactersInKey/{keyId:int}"] = parameters =>
+            {
+                return null;
             };
         }
     }

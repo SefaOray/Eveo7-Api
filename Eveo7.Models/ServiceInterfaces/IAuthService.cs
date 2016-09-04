@@ -7,5 +7,6 @@ namespace Eveo7.Models.ServiceInterfaces
         User GetUserFromToken(string token);
         User ValidateUser(string email, string password);
         User Register(string email, string password);
+        bool UserExistsWithEmail(string email);
     }
 }

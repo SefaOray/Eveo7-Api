@@ -10,7 +10,8 @@ namespace Eveo7.Models.ServiceInterfaces
         bool IsValidCharacterKey(ApiKey key);
         bool KeyBelongsToAccount(int keyId, int userId);
         bool CanCreateAccountApiKey(int keyId, string vcode);
-        AccountApiKey CreateAccountApiKey(int keyId, string vCode, int userId);
+        AccountApiKey CreateAccountApiKey(int keyId, string vCode, int userId, string name);
         IEnumerable<AccountApiKey> ListAccountApiKeys(int accountId);
+        AccountApiKey GetKey(int id);
     }
 }

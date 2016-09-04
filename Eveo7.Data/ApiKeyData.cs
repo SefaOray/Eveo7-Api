@@ -36,9 +36,9 @@ namespace Eveo7.Data
             return dbResult;
         }
 
-        public AccountApiKey CreateAccountApiKey(int keyId, string vCode, int userId)
+        public AccountApiKey CreateAccountApiKey(int keyId, string vCode, int userId, string name)
         {
-            var sql = $@"INSERT INTO Account_ApiKeys(KeyId, VerificationCode, UserId) VALUES ({keyId}, '{vCode}', '{userId}')
+            var sql = $@"INSERT INTO Account_ApiKeys(KeyId, VerificationCode, UserId, Name) VALUES ({keyId}, '{vCode}', '{userId}', '{name}')
                         SELECT * FROM Account_ApiKeys WHERE Id = SCOPE_IDENTITY()";
 
             var dbResult = DataExecuter.QuerySingle<AccountApiKey>(sql);
