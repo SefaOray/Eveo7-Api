@@ -46,7 +46,10 @@ namespace Eveo7.Api.Modules
 
             Get["/listCharactersInKey/{keyId:int}"] = parameters =>
             {
-                return null;
+                var currentUser = (User)Context.CurrentUser;
+                var characters = accountListingService.GetCharactersInKey(parameters.keyId, currentUser.Id);
+
+                return characters;
             };
         }
     }

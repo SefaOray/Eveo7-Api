@@ -62,5 +62,10 @@ namespace Eveo7.Services
         {
             return _keyData.GetAccountApiKey(id);
         }
+
+        public AccountApiKey GetKey(int id, int userId)
+        {
+            return _keyData.GetAccountApiKey(id);
+        }
     }
 }

@@ -12,6 +12,7 @@ namespace Eveo7.Models.ServiceInterfaces
     public interface IAccountListingService
     {
         AccountCharacter AddCharacterToAccount(int accountKeyId, int accountId, long characterId);
+        List<EveCharacter> GetCharactersInKey(int keyId, int userId);
 
     }
 }

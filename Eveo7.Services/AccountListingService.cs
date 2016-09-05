@@ -27,9 +27,8 @@ namespace Eveo7.Services
             return _accountListingData.AddCharacterToAccount(characterId,accountId, accountKeyId);
         }
 
-        public List<EveCharacter> GetCharactersInKey(int keyId)
+        public List<EveCharacter> GetCharactersInKey(int keyId, int userId)
         {
-            //TODO: Need to authorize with user id
             var key = _apiKeyService.GetKey(keyId);
 
             if (key == null)

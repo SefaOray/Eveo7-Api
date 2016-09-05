@@ -27,6 +27,16 @@ namespace Eveo7.Data
             return dbResult;
         }
 
+        public AccountApiKey GetAccountApiKey(int keyId, int userId)
+        {
+            var sql =
+                $"SELECT * FROM Account_ApiKeys WITH (NOLOCK) WHERE Id = {keyId} AND UserId = '{userId}'";
+
+            var dbResult = DataExecuter.QuerySingle<AccountApiKey>(sql);
+
+            return dbResult;
+        }
+
         public AccountApiKey GetAccountApiKey(int keyId, string vCode)
         {
             var sql = $"SELECT * FROM Account_ApiKeys WITH (NOLOCK) WHERE KeyId = {keyId} AND VerificationCode = '{vCode}'";
@@ -54,5 +64,7 @@ namespace Eveo7.Data
 
             return dbResult;
         }
+
+
     }
 }
