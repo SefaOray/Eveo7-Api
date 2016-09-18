@@ -10,13 +10,20 @@ namespace Eveo7.Data
 {
     public class AccountListingData : IAccountListingData
     {
-        public AccountCharacter AddCharacterToAccount(long characterId, int accouuntId, int accountKeyId)
+        public AccountCharacter AddCharacterToAccount(long characterId, int accountId, int accountKeyId)
         {
             var sql =
-                $@"INSERT INTO Account_Characters(AccountId, KeyId, CharacterId) VALUES ({accouuntId},{accountKeyId}, {characterId})
+                $@"INSERT INTO Account_Characters(AccountId, KeyId, CharacterId) VALUES (@accountId,@accountKeyId, @characterId)
                 SELECT * FROM Account_Characters WHERE Id = SCOPE_IDENTITY()";
 
-            return DataExecuter.QuerySingle<AccountCharacter>(sql);
+            var param = new
+            {
+                accountId = accountId,
+                accountKeyId = accountKeyId,
+                characterId = characterId
+            };
+
+            return DataExecuter.QuerySingle<AccountCharacter>(sql, param);
         }
     }
 }

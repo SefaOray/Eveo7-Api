@@ -19,6 +19,8 @@ namespace Eveo7.Api.Modules
             //Add Character from Eve Online api to user account
             Post["/addCharacter/{keyId:int}/{characterId:int}"] = parameters =>
             {
+                //TODO: Refactor this method maybe? -_-
+
                 var currentUser = (User)Context.CurrentUser;
 
                 var userApiKeys = (IEnumerable<AccountApiKey>)apiKeyService.ListAccountApiKeys(currentUser.Id);
@@ -41,7 +43,8 @@ namespace Eveo7.Api.Modules
 
             Get["/listCharacters"] = parameters =>
             {
-                return new List<AccountCharacter>();
+                var currentUser = (User)Context.CurrentUser;
+                return accountListingService.ListCharacters(currentUser.Id);
             };
 
             Get["/listCharactersInKey/{keyId:int}"] = parameters =>

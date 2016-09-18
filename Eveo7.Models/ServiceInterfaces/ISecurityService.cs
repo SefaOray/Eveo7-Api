@@ -4,8 +4,8 @@ namespace Eveo7.Models.ServiceInterfaces
 {
     public interface ISecurityService
     {
-        string Encrypt(string plainText, string passPhrase);
-        string Decrypt(string cipherText, string passPhrase);
-        string GenerateSalt();
+        byte[] Encrypt(byte[] plainText, byte[] salt);
+        byte[] CreateSalt(int size);
+        bool CompareByteArrays(byte[] array1, byte[] array2);
     }
 }

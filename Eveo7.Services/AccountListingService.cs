@@ -1,11 +1,12 @@
 ﻿using System.Collections.Generic;
 using eZet.EveLib.EveXmlModule;
 using eZet.EveLib.EveXmlModule.Models.Account;
-using Eveo7.Models;
 using Eveo7.Models.Account;
 using Eveo7.Models.DataInterfaces;
 using Eveo7.Models.ServiceInterfaces;
 using System.Linq;
+using static eZet.EveLib.EveXmlModule.Models.Account.CharacterList;
+using System.Threading.Tasks;
 
 namespace Eveo7.Services
 {
@@ -51,6 +52,26 @@ namespace Eveo7.Services
             }
 
             return result;
+        }
+
+        public List<CharacterInfo> ListCharacters(int userId)
+        {
+            var keys = _apiKeyData.LisAccountApiKeys(userId);
+            var characters = new List<CharacterInfo>();
+
+            var tasks = keys.ToList().Select((x) => {
+                var key = new ApiKey(x.KeyId, x.VerificationCode);
+                return key.GetCharacterListAsync();
+            });
+
+            var results = Task.WhenAll(tasks);
+
+            foreach (var item in results.Result)
+            {
+                characters.AddRange(item.Result.Characters);
+            }
+
+            return characters;
         }
     }
 }

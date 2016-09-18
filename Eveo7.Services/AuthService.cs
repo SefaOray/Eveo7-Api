@@ -17,15 +17,15 @@ namespace Eveo7.Services
         private readonly object _thisLock = new object();
         public User Register(string email, string password)
         {
-            var salt = _securityService.GenerateSalt();
-            var hashedPass = _securityService.Encrypt(password, salt);
+            var salt = _securityService.CreateSalt(32);
+            var hashedPass = _securityService.Encrypt(System.Text.Encoding.UTF8.GetBytes(password), salt);
             var token = "";
             lock (_thisLock)
             {
                  token = Guid.NewGuid().ToString();
             }
             
-            return _authData.RegisterUser(email, hashedPass, salt, token);
+            return _authData.RegisterUser(email, System.Text.Encoding.UTF8.GetString(hashedPass), System.Text.Encoding.UTF8.GetString(salt), token);
         }
 
         public User GetUserFromToken(string token)
@@ -40,12 +40,12 @@ namespace Eveo7.Services
             if (user == null)
                 return null;
 
-            var decryptedPass = _securityService.Decrypt(user.Password, user.Salt);
+            var decryptedPass = _securityService.Encrypt(System.Text.Encoding.UTF8.GetBytes(password), System.Text.Encoding.UTF8.GetBytes(user.Salt));
 
-            if (decryptedPass == password)
+            if (_securityService.CompareByteArrays(System.Text.Encoding.UTF8.GetBytes(user.Password),decryptedPass))
                 return user;
 
-            return null;
+            return null; 
         }
 
         public bool UserExistsWithEmail(string email)
